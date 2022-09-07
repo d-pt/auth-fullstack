@@ -6,7 +6,18 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 -add local key to ssh-agent like store
 $eval "$(ssh-agent -s)"
 $ssh-add ~/.ssh/id_ed25519
---Add a new pvt SSH key to your GitHub account."
+-Add a new pvt SSH key to your GitHub account."
+
+-default port 22 might not work, so change the config, create below file
+sudo vi ~/.ssh/config
+
+And add the following 3 lines
+
+Host github.com
+ Hostname ssh.github.com
+ Port 443
+
+and test ssh -T git@github.com
 
 
 --steps to start git

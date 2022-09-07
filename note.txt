@@ -1,0 +1,2 @@
+--below is nice bog, trying to implemet it
+https://spring.io/guides/tutorials/spring-security-and-angular-js/
