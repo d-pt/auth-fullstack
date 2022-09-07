@@ -1,0 +1,24 @@
+--configure github
+
+----for git hu authentication
+-generate local key, pvt & pub will be generated
+ssh-keygen -t ed25519 -C "your_email@example.com"
+-add local key to ssh-agent like store
+$eval "$(ssh-agent -s)"
+$ssh-add ~/.ssh/id_ed25519
+--Add a new pvt SSH key to your GitHub account."
+
+
+--steps to start git
+----create README.md with echo text
+echo "# auth-fullstack" >> README.md
+--init git
+git init
+git add README.md
+git commit -m "first commit"
+--create a banch with name "main"
+git branch -M main
+--connect and bind local repo to remote
+git remote add origin https://github.com/d-pt/auth-fullstack.git
+-- push will commit in remote repo
+git push -u origin main
